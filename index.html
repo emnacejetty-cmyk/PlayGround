@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Neon Drift</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="game">
+    <canvas id="canvas" aria-label="Neon Drift game"></canvas>
+
+    <header class="hud">
+      <div class="brand"><span class="brand-mark"></span>NEON DRIFT</div>
+      <div class="scorebox"><span>SCORE</span><strong id="score">000000</strong></div>
+      <div class="lives" id="lives" aria-label="Lives"></div>
+    </header>
+
+    <section id="start" class="panel">
+      <div class="eyebrow">MIDNIGHT CIRCUIT // 01</div>
+      <h1>NEON<br><em>DRIFT</em></h1>
+      <p>Survive the grid. Chain near misses.<br>Own the night.</p>
+      <button id="play" class="primary">START ENGINE <span>→</span></button>
+      <div class="controls"><kbd>WASD</kbd> / <kbd>ARROWS</kbd> TO STEER</div>
+    </section>
+
+    <section id="gameover" class="panel hidden">
+      <div class="eyebrow">RUN TERMINATED</div>
+      <h1>FINAL<br><em>SCORE</em></h1>
+      <strong class="final" id="finalScore">000000</strong>
+      <p id="recordText">NEW PERSONAL BEST</p>
+      <button id="retry" class="primary">RACE AGAIN <span>↻</span></button>
+    </section>
+
+    <div id="toast" class="toast"></div>
+
+    <div class="mobile-controls" id="mobileControls">
+      <button class="pad left" data-key="left" aria-label="Move left">‹</button>
+      <button class="pad right" data-key="right" aria-label="Move right">›</button>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
